@@ -1,14 +1,11 @@
 import React, { useState } from 'react';
 import './App.css';
 import Header from './components/Header';
-import About from './components/pages/About';
-import Portfolio from './components/pages/Portfolio';
-import Contact from './components/pages/Contact';
-import Resume from './components/pages/Resume';
-import Footer from '/components/Footer';
-
-
-
+import About from './components/About';
+import Portfolio from './components/Portfolio';
+import Contact from './components/Contact';
+import Resume from './components/Resume';
+import Footer from './components/Footer';
 
 function App() {
   const [currentPage, setCurrentPage] = useState('About');
@@ -26,11 +23,9 @@ function App() {
     return <Resume />;
   };
 
-  const handlePageChange = (page) => setCurrentPage(page);
-
   return (
    <div>
-    <Header currentPage={currentPage} handlePageChange={handlePageChange} />
+    <Header currentPage={currentPage} setCurrentPage={setCurrentPage} />
     {renderPage()}
     <Footer />
    </div>
