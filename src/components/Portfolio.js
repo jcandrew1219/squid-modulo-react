@@ -4,9 +4,9 @@ import projectsData from './ProjectsData';
 
 function Portfolio() {
     return(
-        <section className="Portfolio">
+        <section className="container my-5">
             <h2>Portfolio</h2>
-            <div className="container">
+            <div className="row">
                 {projectsData.map((project, index) => (
                     <Project 
                         id={index} 

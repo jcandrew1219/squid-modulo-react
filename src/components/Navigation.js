@@ -4,7 +4,8 @@ import React from 'react';
 // We assign them to their own variable names
 function Navigation({currentPage, setCurrentPage}) {
   return (
-    <ul className="nav nav-tabs">
+    <div className="col-6 justify-content-end">
+    <ul className="nav justify-content-end mt-2">
       <li className="nav-item">
         <a
           href="#about"
@@ -47,6 +48,7 @@ function Navigation({currentPage, setCurrentPage}) {
         </a>
       </li>
     </ul>
+    </div>
   );
 }
 
